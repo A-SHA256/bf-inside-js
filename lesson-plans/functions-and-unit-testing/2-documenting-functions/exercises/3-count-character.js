@@ -3,7 +3,11 @@
 console.log('-- begin --');
 
 /**
- *
+ * Count how many indicated chars in the string
+ * 
+ * @param {string} text - the string to check
+ * @param {string} toCount - the chars to count in the string
+ * @returns {number} number of indicated chars in the string 
  */
 const countCharacter = (text, toCount) => {
   if (toCount.length !== 1) {
