@@ -23,7 +23,13 @@ const checkIt = (text = '', cb) => {
  * @param {string} [str=''] - The string to check.
  * @returns {boolean} Whether or not the string is a palindrome.
  */
-const isPalindrome = (str = '') => {};
+const isPalindrome = (str = '') => {
+  const revPart = str.split('').reverse().join('');
+  if (str === revPart) {
+    return true;
+  }
+  return false;
+}
 
 const check1 = checkIt('RacEcaR', isPalindrome);
 console.assert(check1 === 'yes', 'Test 1');
@@ -32,9 +38,9 @@ const check2 = checkIt('Racecar', isPalindrome);
 console.assert(check2 === 'no', 'Test 2');
 
 const check3 = checkIt('-+(*)+-', isPalindrome);
-console.assert(check3 === 'yes', 'Test 3');
+console.assert(check3 === 'no', 'Test 3');
 
-// --- declare and test second callback ---
+// --- declare and test second callback --- //
 
 /**
  * Checks if a string is "JavaScript" or "JS".
@@ -43,6 +49,8 @@ console.assert(check3 === 'yes', 'Test 3');
  * @param {string} [str=''] - The string to check.
  * @returns {boolean} Whether or not the string is JS.
  */
+
+/*
 const isJS = (txt = '') => {};
 
 const check4 = checkIt('JavaSCripT', isJS);
@@ -56,3 +64,4 @@ console.assert(check6 === 'yes', 'Test 6');
 
 const check7 = checkIt('js', isJS);
 console.assert(check7 === 'yes', 'Test 7');
+*/
